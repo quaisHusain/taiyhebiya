@@ -1,0 +1,30 @@
+
+  <%#= select :batch, :id,
+  @batches.map {|b| [b.full_name, b.id] },
+  {:prompt => "#{t('select_a_batch')}"},
+  {:onchange => "#{remote_function(
+  :url => { :action => 'show' },
+  :with => "'batch_id='+value",
+  :before => "Element.show('loader')",
+  :success => "Element.hide('loader')"  )}"} %>
+	<table  width="100%" cellspacing="1" cellpadding="1" align="center">
+		<tr class="tr-even">
+	 <%
+	 count=0
+	 @batches.each do |b|%>
+	 
+	 <% if count == 3
+	 	count=0 %>
+	 	</tr><tr class="tr-even">
+	 <%end%>
+	 	<td>
+        <%= radio_button "class", "id", b.id,{:onchange => "#{remote_function(
+          :url => { :action => 'new_entry' },
+          :with => "'batch_id='+value + '&timetable_id=' +#{@timetable.id}",
+          :before => "Element.show('loader')",
+          :success => "Element.hide('loader')"  )}"} %> <label><%= b.full_name%></label>
+         </td>
+         <% count += 1%>
+         <%end%>
+         </tr>
+     </table>

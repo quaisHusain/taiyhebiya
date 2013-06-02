@@ -1,0 +1,65 @@
+<%-# Fedena
+#Copyright 2010 Foradian Technologies Private Limited
+#
+#This product includes software developed at
+#Project Fedena - http://www.projectfedena.org/
+#
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing,
+#software distributed under the License is distributed on an
+#"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#KIND, either express or implied.  See the License for the
+#specific language governing permissions and limitations
+#under the License. -%>
+
+<div id="content-header">
+     <%= image_tag("/images/show_settings.png") %>
+  <h1><%= t('subject') %></h1>
+  <h3><%= t('home') %></h3>
+  <div id="app-back-button">
+    <%= link_to_function image_tag("/images/buttons/back.png",:border => 0), "history.back()" %>
+  </div>
+</div>
+
+<div id="page-yield">
+  <div id="flash-box">
+  <% unless flash[:notice].nil? %>
+    <p class="flash-msg"> <%= flash[:notice] %> </p>
+  <% end %>
+  </div>
+<div class="box">
+
+  
+<%= image_tag("loader.gif",:align => "absmiddle",:border => 0,:id => "loader", :style =>"display: none;" ) %>
+   <table  width="100%" cellspacing="1" cellpadding="1" align="center">
+		<tr class="tr-even">
+	 <%
+	 count=0
+	 @batches.each do |b|%>
+	 
+	 <% if count == 3
+	 	count=0 %>
+	 	</tr><tr class="tr-even">
+	 <%end%>
+	 	<td>
+        <%= radio_button "class", "id", b.id,{:onchange => "#{remote_function(
+  :url => { :action => 'show' },
+  :with => "'batch_id='+value",
+  :before => "Element.show('loader')",
+  :success => "Element.hide('loader')"  )}"} %> <label><%= b.full_name%></label>
+         </td>
+         <% count += 1%>
+         <%end%>
+         </tr>
+     </table>
+
+<div id="subjects"></div>
+<div id="modal-box" style="display:none;"></div>
+
+<div class="extender"></div>
+ </div></div>

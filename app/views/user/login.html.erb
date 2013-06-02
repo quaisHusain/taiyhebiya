@@ -1,0 +1,208 @@
+<%-# Fedena
+#Copyright 2010 Foradian Technologies Private Limited
+#
+#This product includes software developed at
+#Project Fedena - http://www.projectfedena.org/
+#
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#Unless required by applicable law or agreed to in writing,
+#software distributed under the License is distributed on an
+#"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+#KIND, either express or implied.  See the License for the
+#specific language governing permissions and limitations
+#under the License. -%>
+<div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          <h1><a href="#">taiyhebiyah HIGH SCHOOL </a></h1>
+          <p><br />
+            <a rel="nofollow" href="#"></a></p>
+        </div>
+      </div>
+      <!-- end #header -->
+      <div id="page">
+        <div id="page-bgtop">
+          <div id="page-bgbtm">
+            <div id="menu">
+              <ul>
+                <li class="current_page_item"><a href="#">Home</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">Photo Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <!-- end #menu -->
+            <div id="content">
+              <div class="ic"></div>
+              <div class="post">
+                <h2 class="title"><a href="#">Welcome to New Taiyhebiyah High </a></h2>
+                <p class="meta">Posted by Principal on March 10, 2010  •  <a class="comments"
+
+                    href="#">Comments (64)</a>  •  <a class="permalink" href="#">Full
+                    article</a></p>
+                <div class="entry">
+                  <p><img height="143" width="143" class="alignleft border" alt=""
+
+                      src="images/img05.jpg" /><strong>New Taiyebiyah High
+                      School</strong> is an English Medium school started by the
+                    raza and dua mubarak of His Holiness Dr. Syedna Mohammed
+                    Burhanuddin (t.u.s.) and managed by madarsa taiyebiyah
+                    committee under the guidance of ATTALIM Mumbai.</p>
+                  <p><strong>    </strong>Education in the School is imparted
+                    through innovative method. The main aims and objectives of
+                    this institution are to impart  to the students maximum
+                    knowledge at the same time to put minimum burden on their
+                    minds. Education is imparted both practically and
+                    theoretically. The school is affiliated to C.B.S.E. and
+                    follows the syllabus prescribed by N.C.E.R.T.</p>
+                </div>
+              </div>
+              <div class="post">
+                <h2 class="title"><a href="#">15th August Celebration done
+                    with much fanfare</a></h2>
+                <p class="meta">Posted by <a href="#">Someone</a> on March 8,
+                  2010  •  <a class="comments" href="#">Comments (64)</a>  •  <a
+
+                    class="permalink" href="#">Full article</a></p>
+                <div class="entry">
+                  <p><img height="143" width="143" class="alignleft border" alt=""
+
+                      src="images/img06.jpg" />The school conducted a flag
+                    hoisting ceremony and cultural event on 15th August 2012.
+                    The event was attended in full strength by the students and
+                    the staff of our school. The parents were also present in
+                    large number to witness the cultural program presented by
+                    students.</p>
+                </div>
+              </div>
+              <div class="post">
+                <h2 class="title"><a href="#"> </a></h2>
+                <p class="meta"><a class="permalink" href="#"><br />
+                  </a></p>
+                <div class="entry">
+                  <p><br />
+                  </p>
+                </div>
+              </div>
+              <div style="clear: both;"> </div>
+            </div>
+            <!-- end #content -->
+            <div id="sidebar">
+              <ul>
+             
+                <li>
+                  <center><h2>LOGIN</h2></center>
+                   <% form_for :user do |form| %>
+
+    <div id="search"> 
+        <label for="username"><%= t('username') %></label>
+        
+        <fieldset>
+          <%= form.text_field :username,
+            :maxlength => 40%>
+        </fieldset>
+
+        <label for="password"><%= t('password') %></label>
+        <fieldset>
+          <%= form.password_field :password %>
+        </fieldset>
+
+        <div id="notice-box">
+          <% if !flash.empty? %>
+            <div id="notice"><%= flash[:notice] %></div>
+          <% end %>
+        </div>
+
+        <div id="submit_area">
+          <%= submit_tag t('login'), :class => "submit" %>
+        </div>
+
+        <label for="forgot_password" class="forgot_password_link">
+          <%= link_to t('forgot_password'),
+            :controller => "user",
+            :action => "forgot_password" %>
+        </label>
+		</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+   <li>
+                  <h2>First term schedule Published</h2>
+                  <p>Please login to check your exam schedule</p>
+                </li>
+    
+  <% end %>
+                </li>
+                <li>
+                	
+                  <h2>Quick Links</h2>
+                  <ul>
+                    <li><a href="#">About TAIYHEBIYAH HIGH SCHOOL<br />
+                      </a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Photo Gallery<br />
+                      </a></li>
+                    <li><a href="#">XSEED Certification<br />
+                      </a></li>
+                    <li><a href="#">STUDENT ACTIVITIES<br />
+                      </a></li>
+                    <li><a href="#">STAFF</a></li>
+                  </ul>
+                  
+                </li>
+                <li>
+                  <h2>Student Blogs</h2>
+                  <ul>
+                    <li><a href="#"><span style="text-decoration: underline;"></span>Our
+                        school<br />
+                      </a></li>
+                    <li>My Social Project</li>
+                    <li>Use of Solar energy ...</li>
+                    <li>Importance of cleanliness</li>
+                    <li>Rain water Harvesting Techniques</li>
+                    <li>Magic of Maths</li>
+                  </ul>
+                </li>
+                <li><br />
+                </li>
+              </ul>
+            </div>
+            <!-- end #sidebar -->
+            <div style="clear: both;"> </div>
+          </div>
+        </div>
+      </div>
+      <!-- end #page --> </div>
+    <div id="footer-wrapper">
+      <div id="footer">
+        <p><br />
+        </p>
+        <p><br />
+        </p>
+      </div>
+    </div>
+
+
+  
+
+   
+  <div id="help_forgot_pw">
+
+  </div>
+  
+<script type="text/javascript">
+  document.getElementById('user_username').focus();
+</script>
